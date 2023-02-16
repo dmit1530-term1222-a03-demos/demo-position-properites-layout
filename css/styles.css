@@ -1,0 +1,165 @@
+body {
+    color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* UTILITY CLASSES */
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.wide-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* HEADER */
+header{
+    background: #3DB39E;
+    font-family: 'Signika', sans-serif;
+    padding: 1rem;
+    /** vendor prefixes help make experimental properities and features compatible with other browsers**/
+    position: -webkit-sticky;
+    position: sticky;
+    /** without a helper property, the sticky position won't work */
+    top: 0;
+    z-index: 20;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+header svg {
+    width: 3rem;
+    margin-right: 1rem;
+}
+header svg path,
+header h1 {
+    color: #fff;
+    fill: #fff;
+}
+
+/* MAIN LAYOUT */
+main {
+    padding: 2rem;
+}
+
+main h2 {
+    font-family: 'Signika', sans-serif;
+    font-size: 5rem;
+    line-height: 1;
+    margin: 3rem auto;
+    text-align: right;
+    max-width: 22rem;
+}
+
+main h2 span {
+    display: block;
+    text-align: left;
+    /** this gives the heading the 'staggered' or 'offset' appearance **/
+}
+
+/** cards */
+.card,
+.wide-flex > div {
+    background-color: #f4f0e8;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    margin: 1rem 0;
+
+    position: relative;
+}
+
+.sale,
+.new {
+    position: absolute;
+    width: 4rem;
+}
+
+.sale,
+.new {
+    top: 2rem;
+    right: 2rem;
+}
+.new {
+    left: 2rem;
+}
+
+h3 {
+    line-height: 2;
+    margin-top: 1rem;
+}
+
+p {
+    margin: 1rem 0;
+}
+
+.price {
+    color: #dc6419;
+    font-weight: 600;;
+}
+.price span {
+    color: #666;
+    text-decoration: line-through;
+}
+
+.card a {
+    background-color: #3DB39E;
+    border-radius: 0.4rem;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.card a:hover,
+.card a:focus {
+    background-color: #dc6419;
+    cursor: pointer;        
+}
+
+.chat {
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px dotted #3DB39E;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.chat img {
+    width: 3rem;
+}
+.chat p {
+    font-size: 0.6rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* MEDIA QUERIES */
+/**768px*/
+@media screen and (min-width: 48rem ) {
+    .wide-flex {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .card {
+        width: calc(100% / 3 - 1rem);
+    }
+
+}
+
