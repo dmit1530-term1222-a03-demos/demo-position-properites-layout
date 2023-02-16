@@ -156,10 +156,9 @@ p {
         display: flex;
         justify-content: space-between;
     }
-    
+
     .card {
         width: calc(100% / 3 - 1rem);
     }
 
 }
-
